@@ -9,12 +9,10 @@ public def palindrome
   end
 
   to_test = to_test.split("")
-  i = to_test.count
-  print to_test
-  i.times do
-    to_pop = to_test.shift()
-    print to_test
-    reversed_word.unshift(to_pop)
+  position = 0
+  to_test.each() do
+    reversed_word.unshift(to_test[position])
+    position += 1
   end
-  print reversed_word
+  reversed_word.eql?(to_test)
 end
